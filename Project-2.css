@@ -1,237 +1,62 @@
-body {
-  text-align: center;
+body{
+  background-color: #695ee1bd;
 }
-#title{
-    background-color: #ff4c68;
-    padding: 3% 15%;
-    text-align: center;
-}
-.dropdown-menu {
-  color: black;
-  border-radius: 5px;
-}
-
-/* NAV BAR SECTION */
-
-.navbar-brand{
-    font-family: "Ubuntu";
-    font-size:2.5rem;
-    font-weight: bold;
-    padding-left: 20px;
-}
-.nav-item{
-    padding: 0 18px;
-}
-.nav-link{
-    font-size: 1.2rem;
-    font-family: 'Montserrat', sans-serif;
-}
-
-#dogi{
-    transform: rotate(25deg);
-    position: relative;
-    right: 50px;
-    z-index:0;
-    top: 40px;
-}
-h1,h2,h3{
-    font-family: 'Montserrat', sans-serif;
-}
-
 h2 {
-font-weight: bold;
-line-height: 1.5;
-font-size: 3rem;
+  position: relative;
+  top: 30px;
+  left: 6px;
+  font-family: 'Rowdies', cursive;
+  color: #2c00ff;
 }
-
-h3{
-    font-weight: bold;
+.inputs{
+   width: 233px;
+   height: 254px;
+   text-align: center;
+   margin: 15% 45%;
+   margin-top: 159px;
+   position: relative;
+   left: -55px;
+   top: -30px;
+   background-color: #66BB6A;
+   padding-top: 74px;
+   border-radius: 17px;
 }
-p {
-    color: #8f8f8f;
-    font-family: 'Dancing Script-dark', cursive;
-    font-weight: darker;
-}
-
-/* Heading */
-
-.price-heading {
-font-family: 'Nunito', sans-serif;
-}
-
-.big-heading {
-  font-family: 'Montserrat', sans-serif;
-  text-align: left;
-  font-weight: bold;
-  font-size: 3.5rem;
-  line-height: 1.5;
+.buttons{
+  height: 48px;
+  width: 50px;
+  background-color: #006bc1;
   color: white;
+  border-radius: 10px;
+  margin-top: 1px;
+  font-size: 17px;
+  transition: .4s;
 }
-
-/* FEATURE SECTION */
-
-.feature {
-  background-color: white;
+.button-0{
+  height: 48px;
+  width: 100px;
+  background-color: #006bc1;
+  color: white;
+  border-radius: 10px;
+  margin-top: 1px;
+  font-size: 17px;
+  transition: .4s;
 }
-
-#features{
-    margin: 0% 15%;
-    padding-top: 120px;
-    margin-top: -120px;
-    background-color: white;
-    height: 400px;
-    position: relative;
-    z-index: 1;
+.result{
+      height: 47px;
+      width: 201px;
+      position: absolute;
+      top: 11px;
+      margin-left: -1px;
+      background-color: #c0eeff;
+      border-radius: 15px;
+      font-size: 43px;
 }
-/* MEDIA QUERY SECTION */
-
-@madia (max-width:1000px)
-{
-  .navbar-collapse collapse show {
-    text-align: left;
-    position: relative;
-    right: 10px;
-    }
-}
-
-@media (max-width: 1000px)
-{
-  #features{
-    height: 700px;
-    }
-}
-@media (max-width: 970px)
-{
-  #title {
-    padding: 0% 15%;
-    text-align: center;
-    }
-  #dogi {
-    position: static;
-    transform: rotate(0);
-    }
-}
-@madia (min-width: 1140px)
-{
-  #dogi {
-    position:relative;
-    z-index: 0;
-    }
-}
-
-.icons
-{
-    color: #ef8172;
-    margin-bottom: 1rem;
-    transition: color;
-    transition: font-size .2s ease-out 100ms;
-}
-
-.icons:hover
-{
-    color: #ff4c68;
-}
-
-.feature-box{
-    text-align: center;
-    padding: 0%;
-}
-
-/* TESTIMONIALS */
-
-#testimonials {
-   background-color:#ef8172;
-   color: #fff;
-}
-
-.testimonial-image{
-    width: 10%;
-    border-radius: 100%;
-    margin:20px;
-}
-
-#press {
-    background-color:#ef8172;
-    text-align: center;
-    padding-bottom: 3%;
-
-}
-
-.press-logo {
-    width: 15%;
-    margin: 20px 20px 50px;
-}
-.carousel-indicators{
-    position: relative;
-    top: 400px;
-    left: -50px;
-}
-.carousel-item{
-    padding: 7% 15%;
-}
-
-/* Download Botton */
-
-.download-botton{
-    margin: 5% 3% 5% 0%;
-}
-.feature-button {
-text-align: left;
-
-}
-
-/* PRICING */
-
-#pricing{
-  padding: 200px;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: normal;
-  font-size: 1.0rem;
-  transition: .01s;
-  background-color: white;
-}
-
-/* CALL TO ACTION SECTION */
-
-#cta {
-  padding: 7% 15%;
-  background-color: #ff4c68;
-  color: #fff;
-}
-
-.cta-section {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3.5rem;
-  line-height: 1.5;
-}
-
-/* FOOTER SECTIOn */
-
-#footer {
-  padding: 7% 15%;
-}
-
-.social-icon {
-  margin: 20px 10px;
-  transition: color .1s;
-}
-
-.social-icon:hover {
-  color: #ff4c68;
-}
-
-.row{
-  padding: 20px;
-}
-
-.card{
-  transition: .2s;
-}
-
-.card:hover
+.buttons:hover
 {
         transform: scale(1.1);
         box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4);
         z-index: 3;
         border-color: #ff4c68 !important;
+        background-color: #03C988;
+        cursor: pointer;
 }

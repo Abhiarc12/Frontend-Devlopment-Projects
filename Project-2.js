@@ -1,80 +1,41 @@
-
-var buttonColours = ["red", "blue", "green", "yellow"];
-
-var gamePattern = [];
-var userClickedPattern = [];
-
-var started = false;
-var level = 0;
-
-//for starting the game
-$(document).keypress(function() {
-  if (!started) {
-    $("#level-title").text("Level " + level);
-    nextSequence();
-    started = true;
-  }
-});
-
-$(".btn").click(function() {
-
-  var userChosenColour = $(this).attr("id");
-  userClickedPattern.push(userChosenColour);
-
-  playSound(userChosenColour);
-  animatePress(userChosenColour);
-
-  checkAnswer(userClickedPattern.length-1);
-});
-
-function checkAnswer(currentLevel) {
-
-    if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
-      if (userClickedPattern.length === gamePattern.length){
-        setTimeout(function () {
-          nextSequence();
-        }, 1000);
-      }
-    } else {
-      playSound("wrong");
-      $("body").addClass("game-over");
-      $("#level-title").text("Game Over, Press Any Key to Restart");
-
-      setTimeout(function () {
-        $("body").removeClass("game-over");
-      }, 200);
-
-      startOver();
+let screen= document.getElementById('screen');
+buttons = document.querySelectorAll('button');
+let screenValue = '';
+for(item of buttons){
+  item.addEventListener('click',(e)=>{
+    buttonText = e.target.innerText;
+    console.log('Button text is',buttonText);
+    if(buttonText=='X'){
+        buttonText = '*';
+        screenValue += buttonText;
+        screen.value = screenValue;
     }
-}
+    else if(buttonText == 'C'){
+      screenValue = "";
+      screen.value = screenValue;
+    }
+    else if(buttonText=='-'){
+        buttonText = '-';
+        screenValue += buttonText;
+        screen.value = screenValue;
+    }
+    else if (buttonText =='='){
+      screen.value = eval(screenValue);
+    }
+    else if(buttonText=='+'){
+        buttonText = '+';
+        screenValue += buttonText;
+        screen.value = screenValue;
+    }
+    else if(buttonText=='÷'){
+        buttonText = '/';
+        screenValue += buttonText;
+        screen.value = screenValue;
+    }
+    else{
+      screenValue += buttonText;
+      screen.value = screenValue;
+    }
 
-
-function nextSequence() {
-  userClickedPattern = [];
-  level++;
-  $("#level-title").text("Level " + level);
-  var randomNumber = Math.floor(Math.random() * 4);
-  var randomChosenColour = buttonColours[randomNumber];
-  gamePattern.push(randomChosenColour);
-
-  $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
-  playSound(randomChosenColour);
-}
-
-function animatePress(currentColor) {
-  $("#" + currentColor).addClass("pressed");
-  setTimeout(function () {
-    $("#" + currentColor).removeClass("pressed");
-  }, 100);
-}
-
-function playSound(name) {
-  var audio = new Audio("sounds/" + name + ".mp3");
-  audio.play();
-}
-
-function startOver() {
-  level = 0;
-  gamePattern = [];
-  started = false;
+  })
 }
