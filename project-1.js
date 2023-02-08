@@ -9,7 +9,7 @@ var img2 = document.querySelector(".player-2");
 img2.setAttribute("src",dice2);
 
 if(player1 > player2){
-  document.querySelector("h1").innerHTML="⛳ Player 1 Win";
+  document.querySelector("h1").innerHTML="⛳ Player 1 Win"; 
 }
 if(player1 < player2){
   document.querySelector("h1").innerHTML="⛳ Player 2 Win";
