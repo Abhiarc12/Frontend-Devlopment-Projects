@@ -38,4 +38,4 @@ for(item of buttons){
     }
 
   })
-}
+};
