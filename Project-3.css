@@ -34,7 +34,7 @@ footer{
 }
 .a{
   background-image: url("images-5/tom2.png");
-  background-size: cover;
+  background-size: cover; 
   visibility: visible;
 }
 .d{
